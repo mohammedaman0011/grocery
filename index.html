@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Market - Your Local Grocery Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+</head>
+<body class="bg-gray-50">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+        <div class="max-w-8xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="logo.svg" alt="VDS Online Grocery Store" class="h-8">
+                </div>
+                <div class="flex-1 max-w-2xl mx-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search for products..." class="w-full pl-10 pr-4 py-2 border border-gray-200 !rounded-button focus:border-custom focus:ring-1 focus:ring-custom">
+                        <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <button class="relative !rounded-button">
+                        <i class="fas fa-shopping-cart text-xl text-gray-700"></i>
+                        <span class="absolute -top-1 -right-1 bg-custom text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+                    <button class="flex items-center space-x-2 !rounded-button" onclick="window.location.href='login.html'">
+                        <i class="fas fa-user text-gray-700"></i>
+                        <span class="text-gray-700">Account</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav class="bg-custom">
+            <div class="max-w-8xl mx-auto px-4">
+                <div class="flex space-x-8">
+                    <a href="#" class="text-white py-3 px-3 font-medium">Home</a>
+                    <a href="#products" class="text-white py-3 px-3 font-medium">Departments</a>
+                    <a href="#" class="text-white py-3 px-3 font-medium">Deals</a>
+                    <a href="#" class="text-white py-3 px-3 font-medium">Fresh Foods</a>
+                    <a href="#contact" class="text-white py-3 px-3 font-medium">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-32 max-w-8xl mx-auto px-4">
+        <div class="glide mb-12">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <div class="relative h-[400px] rounded-lg overflow-hidden">
+                            <img src="dcff109a-030c-4e68-b53c-4460beaf29eb.jpg" class="w-full h-full object-cover" alt="Fresh Market Produce">
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
+                                <div class="text-white ml-12">
+                                    <h2 class="text-4xl font-bold mb-4">Farm Fresh & Local</h2>
+                                    <p class="text-xl mb-6">Quality produce delivered from local farms daily</p>
+                                    <button class="bg-custom text-white px-6 py-2 !rounded-button hover:bg-custom/90 transition-colors">Explore Fresh Produce</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+        </div>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Shop by Category</h2>
+            <div class="grid grid-cols-6 gap-6">
+                <a href="#" class="group">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-center">
+                            <i class="fas fa-carrot text-4xl text-custom mb-4"></i>
+                            <h3 class="font-medium">Fruits & Vegetables</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-center">
+                            <i class="fas fa-bread-slice text-4xl text-custom mb-4"></i>
+                            <h3 class="font-medium">Bakery</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-center">
+                            <i class="fas fa-egg text-4xl text-custom mb-4"></i>
+                            <h3 class="font-medium">Dairy & Eggs</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-center">
+                            <i class="fas fa-fish text-4xl text-custom mb-4"></i>
+                            <h3 class="font-medium">Meat & Seafood</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-center">
+                            <i class="fas fa-wine-bottle text-4xl text-custom mb-4"></i>
+                            <h3 class="font-medium">Beverages</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-center">
+                            <i class="fas fa-cookie text-4xl text-custom mb-4"></i>
+                            <h3 class="font-medium">Snacks</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 1,
+            autoplay: 5000
+        }).mount();
+    </script>
+</body>
+</html>

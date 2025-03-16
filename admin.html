@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - VDS Online Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="logo.svg" alt="VDS Online Grocery Store"> Admin</div>
+            <div class="nav-links">
+                <a href="#products">Products</a>
+                <a href="#orders">Orders</a>
+                <a href="#inventory">Inventory</a>
+                <div class="search-container">
+                    <input type="text" id="adminSearchInput" placeholder="Search products...">
+                    <button id="adminSearchButton"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="admin-controls">
+                <span id="adminUsername"></span>
+                <button onclick="logout()" class="logout-button">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <section id="contact-details" class="admin-section">
+            <div class="section-header">
+                <h2>Contact Details</h2>
+                <button onclick="saveContactDetails()" class="save-button">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="storeAddress">Store Address</label>
+                    <textarea id="storeAddress" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="storePhone">Phone Number</label>
+                    <input type="tel" id="storePhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="storeEmail">Email</label>
+                    <input type="email" id="storeEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="businessHours">Business Hours</label>
+                    <textarea id="businessHours" rows="3" required></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="admin-section">
+            <div class="section-header">
+                <h2>Manage Products</h2>
+                <div class="admin-filters">
+                    <select id="adminCategoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="bread">Bread</option>
+                        <option value="dairy">Dairy</option>
+                    </select>
+                </div>
+                <button onclick="showAddProductModal()" class="add-button">
+                    <i class="fas fa-plus"></i> Add Product
+                </button>
+            </div>
+            <div class="product-list" id="productList">
+                <!-- Products will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Add/Edit Product Modal -->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <h3 id="modalTitle">Add Product</h3>
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Price ($)</label>
+                        <input type="number" id="productPrice" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImage">Product Image</label>
+                        <input type="file" id="productImageFile" accept="image/*" required>
+                        <div id="imagePreview" class="image-preview"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="productStock">Stock</label>
+                        <input type="number" id="productStock" required>
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="submit" class="save-button">Save</button>
+                        <button type="button" onclick="closeProductModal()" class="cancel-button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

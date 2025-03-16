@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60" width="300" height="60">
+  <!-- Background circle for the icon -->
+  <circle cx="30" cy="30" r="25" fill="#2E7D32" opacity="0.1"/>
+  
+  <!-- Leaf icon -->
+  <path d="M30 15 Q40 15 45 30 Q35 25 30 35 Q25 25 15 30 Q20 15 30 15Z" fill="#2E7D32"/>
+  
+  <!-- VDS text -->
+  <text x="70" y="35" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#2E7D32">VDS</text>
+  
+  <!-- Online text -->
+  <text x="140" y="35" font-family="Inter, sans-serif" font-size="24" fill="#333333">online</text>
+</svg>
