@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - VDS Online Grocery Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#4CAF50" data-border-radius="small"></script>
+    <script src="translations.js"></script>
+</head>
+<body class="bg-gray-50">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+        <div class="max-w-8xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/">
+                        <img src="logo.svg" alt="VDS Online Grocery Store" class="h-8">
+                    </a>
+                </div>
+                <div class="flex-1 max-w-2xl mx-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search for products..." class="w-full pl-10 pr-4 py-2 border border-gray-200 !rounded-button focus:border-custom focus:ring-1 focus:ring-custom">
+                        <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <select class="appearance-none bg-transparent border-none focus:outline-none text-sm font-medium" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="da">Dansk</option>
+                    </select>
+                    <button class="relative !rounded-button">
+                        <i class="fas fa-shopping-cart text-xl text-gray-700"></i>
+                        <span class="absolute -top-1 -right-1 bg-custom text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+                    <button class="flex items-center space-x-2 !rounded-button" onclick="window.location.href='login.html'">
+                        <i class="fas fa-user text-gray-700"></i>
+                        <span class="text-gray-700">Account</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav class="bg-custom">
+            <div class="max-w-8xl mx-auto px-4">
+                <div class="flex space-x-8">
+                    <a href="#" class="text-white py-3 px-3 font-medium"><i class="fas fa-th-large mr-2"></i>All Categories</a>
+                    <a href="#" class="text-white py-3 px-3 font-medium"><i class="fas fa-carrot mr-2"></i>Fresh Produce</a>
+                    <a href="#" class="text-white py-3 px-3 font-medium"><i class="fas fa-egg mr-2"></i>Dairy & Eggs</a>
+                    <a href="#" class="text-white py-3 px-3 font-medium"><i class="fas fa-fish mr-2"></i>Meat & Seafood</a>
+                    <a href="#" class="text-white py-3 px-3 font-medium"><i class="fas fa-bread-slice mr-2"></i>Bakery</a>
+                    <a href="#" class="text-white py-3 px-3 font-medium"><i class="fas fa-wine-bottle mr-2"></i>Beverages</a>
+                    <a href="#" class="text-white py-3 px-3 font-medium"><i class="fas fa-cookie mr-2"></i>Snacks</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-16">
+        <div class="max-w-8xl mx-auto px-4">
+            <nav class="flex mb-8" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-2">
+                    <li><a href="/" class="text-gray-500 hover:text-custom">Home</a></li>
+                    <li><span class="text-gray-400 mx-2">/</span></li>
+                    <li><a href="#" class="text-gray-500 hover:text-custom">Fresh Produce</a></li>
+                    <li><span class="text-gray-400 mx-2">/</span></li>
+                    <li class="text-custom font-medium">Vegetables</li>
+                </ol>
+            </nav>
+
+            <div class="flex gap-8">
+                <aside class="w-64 flex-shrink-0">
+                    <div class="bg-white rounded-lg shadow-sm p-6 space-y-6">
+                        <div>
+                            <h3 class="font-semibold mb-4">Price Range</h3>
+                            <div class="space-y-2">
+                                <input type="range" class="w-full" min="0" max="100" value="50">
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>$0</span>
+                                    <span>$100</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold mb-4">Categories</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-custom focus:ring-custom">
+                                    <span class="ml-3 text-sm">Organic (24)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-custom focus:ring-custom">
+                                    <span class="ml-3 text-sm">Vegan (18)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-custom focus:ring-custom">
+                                    <span class="ml-3 text-sm">Local Farm (15)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-gray-300 text-custom focus:ring-custom">
+                                    <span class="ml-3 text-sm">Seasonal (12)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-semibold mb-4">Sort By</h3>
+                            <select class="w-full border-gray-300 rounded-button focus:border-custom focus:ring-custom">
+                                <option>Popularity</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="flex-1">
+                    <div class="grid grid-cols-3 gap-6">
+                        <!-- Product Card Template -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                            <img src="images/apple.jpeg" alt="Fresh Apples" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="font-medium mb-2">Fresh Organic Apples</h3>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-lg font-semibold text-custom">$4.99</span>
+                                    <button class="bg-custom text-white px-4 py-2 rounded-button hover:bg-custom/90 transition-colors">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat product cards as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t mt-16">
+        <div class="max-w-8xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">About VDS Grocery</h3>
+                    <p class="text-gray-600">Your trusted source for fresh and quality groceries.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Customer Service</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-custom">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-custom">FAQs</a></li>
+                        <li><a href="#" class="hover:text-custom">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-custom">Store Locations</a></li>
+                        <li><a href="#" class="hover:text-custom">Careers</a></li>
+                        <li><a href="#" class="hover:text-custom">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-custom"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-custom"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-custom"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t mt-8 pt-8 text-center text-gray-600">
+                <p>&copy; 2024 VDS Grocery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
